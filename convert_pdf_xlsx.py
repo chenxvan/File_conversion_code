@@ -3,7 +3,7 @@ Original author: rkf33
 Updated by chenxvan for Mac
 
 possible pkg needed:
-pip install pytesseract pdf2image tqdm openpyxl
+pip install pytesseract pdf2image tqdm openpyxl pandas nltk
 """
 import os
 import pandas as pd
