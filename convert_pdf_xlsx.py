@@ -2,6 +2,9 @@
 Original author: rkf33
 Updated by chenxvan for Mac
 
+python3 -m venv myenv
+source myenv/bin/activate
+
 possible pkg needed:
 pip install pytesseract pdf2image tqdm openpyxl pandas nltk
 """
@@ -26,6 +29,7 @@ def pdf_to_text(pdf_path):
         full_text = ""
         for image in images:
             text = pytesseract.image_to_string(image)
+            text = text.replace('|', 'I') 
             full_text += text + "\n"
 
         return full_text
